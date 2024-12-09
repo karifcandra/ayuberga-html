@@ -8,17 +8,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/solid.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/select2.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.datepicker2.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/bxslider.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
+	<script type="text/javascript" src="js/jquery.datepicker2.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 </head>
 <body>
 	<header>
 		<div class="wrapper">
 			<div class="logo">
 				<a href="index.html"><img src="images/logo-alt.png"></a>
-			</div>
+			</div> 
 			<div class="main-menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -36,9 +40,97 @@
 			</div>
 		</div>
 	</header>
+	<div id="filters">
+		<a href="#" class="close">&times;</a>
+		<h1>Apply Filters</h1>
+		<form>
+
+			<div class="row">
+				<div class="col-2">
+					<h3>Select City</h3>
+					<div class="option-group">
+						<label class="checkbox">Madinah
+						  <input type="checkbox">
+						  <span class="checkmark"></span>
+						</label>
+						<label class="checkbox">Makkah
+						  <input type="checkbox">
+						  <span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<h3>Flights</h3>
+					<div class="option-group">
+						<label class="radio">With Flights
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">Without Flights
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<h3>Total Package Nights</h3>
+					<div class="option-group">
+						<label class="radio">2 Nights and above
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">4 Nights and above
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">6 Nights and above
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">8 Nights and above
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">10 Nights and above
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<h3>Hotel Category</h3>
+					<div class="option-group">
+						<label class="radio">5 Star
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">4 Star
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">3 Star
+						  <input type="radio">
+						  <span class="radiomark"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="btn-group">
+				<input type="reset" class="btn btn-secondary" value="Clear" name="">
+				<input type="submit" class="btn" value="Apply" name="">
+			</div>
+		</form>
+
+	</div>
 	<div class="listing">
+		
+			
 		<div class="head">
 			<h1>Umrah Packages For You</h1>
+			
 			<a href="#" class="filters"><i class="fa-solid fa-filter"></i> Sort & Filters</a>
 		</div>
 		<div class="wrapper">
@@ -58,43 +150,13 @@
 					<a href="detail-package.html">View More</a>
 				</div>
 				<div class="pricing">
-					<div class="nights">
-						<span>1 Night</span>
-					</div>
-					<div class="nights-dropdown">
-						<form>
-							<ul>
-								<li>
-									<h4>1 Night</h4>
-									<label>
-										<span>Makkah 1N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>2 Nights</h4>
-									<label>
-										<span>Makkah 2N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>3 Nights</h4>
-									<label>
-										<span>Makkah 3N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>4 Nights</h4>
-									<label>
-										<span>Makkah 4N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-							</ul>
-						</form>
-					</div>
+					
+					<select class="select2 ">
+						<option>Makkah 1N</option>
+						<option>Makkah 2N</option>
+						<option>Makkah 3N</option>
+						
+					</select>
 					<select class="select2 hotel">
 						<option>3 Stars Hotel</option>
 						<option>4 Stars Hotel</option>
@@ -125,43 +187,12 @@
 					<a href="detail-package.html">View More</a>
 				</div>
 				<div class="pricing">
-					<div class="nights">
-						<span>1 Night</span>
-					</div>
-					<div class="nights-dropdown">
-						<form>
-							<ul>
-								<li>
-									<h4>1 Night</h4>
-									<label>
-										<span>Makkah 1N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>2 Nights</h4>
-									<label>
-										<span>Makkah 2N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>3 Nights</h4>
-									<label>
-										<span>Makkah 3N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>4 Nights</h4>
-									<label>
-										<span>Makkah 4N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-							</ul>
-						</form>
-					</div>
+					<select class="select2 ">
+						<option>Makkah 1N</option>
+						<option>Makkah 2N</option>
+						<option>Makkah 3N</option>
+						
+					</select>
 					<select class="select2 hotel">
 						<option>3 Stars Hotel</option>
 						<option>4 Stars Hotel</option>
@@ -192,43 +223,12 @@
 					<a href="detail-package.html">View More</a>
 				</div>
 				<div class="pricing">
-					<div class="nights">
-						<span>1 Night</span>
-					</div>
-					<div class="nights-dropdown">
-						<form>
-							<ul>
-								<li>
-									<h4>1 Night</h4>
-									<label>
-										<span>Makkah 1N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>2 Nights</h4>
-									<label>
-										<span>Makkah 2N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>3 Nights</h4>
-									<label>
-										<span>Makkah 3N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>4 Nights</h4>
-									<label>
-										<span>Makkah 4N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-							</ul>
-						</form>
-					</div>
+					<select class="select2 ">
+						<option>Makkah 1N</option>
+						<option>Makkah 2N</option>
+						<option>Makkah 3N</option>
+						
+					</select>
 					<select class="select2 hotel">
 						<option>3 Stars Hotel</option>
 						<option>4 Stars Hotel</option>
@@ -259,43 +259,12 @@
 					<a href="detail-package.html">View More</a>
 				</div>
 				<div class="pricing">
-					<div class="nights">
-						<span>1 Night</span>
-					</div>
-					<div class="nights-dropdown">
-						<form>
-							<ul>
-								<li>
-									<h4>1 Night</h4>
-									<label>
-										<span>Makkah 1N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>2 Nights</h4>
-									<label>
-										<span>Makkah 2N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>3 Nights</h4>
-									<label>
-										<span>Makkah 3N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>4 Nights</h4>
-									<label>
-										<span>Makkah 4N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-							</ul>
-						</form>
-					</div>
+					<select class="select2 ">
+						<option>Makkah 1N</option>
+						<option>Makkah 2N</option>
+						<option>Makkah 3N</option>
+						
+					</select>
 					<select class="select2 hotel">
 						<option>3 Stars Hotel</option>
 						<option>4 Stars Hotel</option>
@@ -326,43 +295,12 @@
 					<a href="detail-package.html">View More</a>
 				</div>
 				<div class="pricing">
-					<div class="nights">
-						<span>1 Night</span>
-					</div>
-					<div class="nights-dropdown">
-						<form>
-							<ul>
-								<li>
-									<h4>1 Night</h4>
-									<label>
-										<span>Makkah 1N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>2 Nights</h4>
-									<label>
-										<span>Makkah 2N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>3 Nights</h4>
-									<label>
-										<span>Makkah 3N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>4 Nights</h4>
-									<label>
-										<span>Makkah 4N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-							</ul>
-						</form>
-					</div>
+					<select class="select2 ">
+						<option>Makkah 1N</option>
+						<option>Makkah 2N</option>
+						<option>Makkah 3N</option>
+						
+					</select>
 					<select class="select2 hotel">
 						<option>3 Stars Hotel</option>
 						<option>4 Stars Hotel</option>
@@ -393,43 +331,12 @@
 					<a href="detail-package.html">View More</a>
 				</div>
 				<div class="pricing">
-					<div class="nights">
-						<span>1 Night</span>
-					</div>
-					<div class="nights-dropdown">
-						<form>
-							<ul>
-								<li>
-									<h4>1 Night</h4>
-									<label>
-										<span>Makkah 1N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>2 Nights</h4>
-									<label>
-										<span>Makkah 2N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>3 Nights</h4>
-									<label>
-										<span>Makkah 3N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-								<li>
-									<h4>4 Nights</h4>
-									<label>
-										<span>Makkah 4N</span>
-										<input type="radio" name="">
-									</label>
-								</li>
-							</ul>
-						</form>
-					</div>
+					<select class="select2 ">
+						<option>Makkah 1N</option>
+						<option>Makkah 2N</option>
+						<option>Makkah 3N</option>
+						
+					</select>
 					<select class="select2 hotel">
 						<option>3 Stars Hotel</option>
 						<option>4 Stars Hotel</option>

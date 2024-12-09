@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AYUBERGA</title>
+	<link rel="shortcut icon" href="images/favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
+	<link href="css/solid.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/select2.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.datepicker2.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/bxslider.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
+	<script type="text/javascript" src="js/jquery.datepicker2.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+    
+</head>
+<body>
+	<header> 
+		<div class="wrapper">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo-alt.png"></a>
+			</div>
+			<div class="main-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="list-packages.html">Umrah Packages</a></li>
+					<li><a href="">Umrah + Holidays</a></li>
+					<li><a href="">B2B</a></li>
+				</ul>
+			</div>
+			<div class="header-actions">
+				<a href="#" class="user-trigger"><i class="fa-solid fa-user"></i></a>
+				<ul class="user-dropdown">
+					<li><a href="">Register</a></li>
+					<li><a href="">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div id="booking">
+		<div class="steps">
+			<div class="step active"><i>1</i> <span>Step 1</span></div>
+			<div class="step active"><i>2</i> <span>Step 2</span></div>
+			<div class="step"><i>3</i> <span>Step 3</span></div>
+			<div class="step"><i>4</i> <span>Step 4</span></div>
+			<div class="step"><i>5</i> <span>Step 5</span></div>
+		</div>
+		<h1>Booking Step 2</h1>
+		<div class="main-booking">
+			<div class="left">
+				<h3>Informasi Personal Anda</h3>
+				<form>
+					<div class="row">
+						<div class="col-2">
+							<div class="fieldgroup">
+								<label>Nama Depan</label>
+								<input type="text" name="">
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="fieldgroup">
+								<label>Nama Belakang</label>
+								<input type="text" name="">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">
+							<div class="fieldgroup">
+								<label>Email</label>
+								<input type="email" name="">
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="fieldgroup">
+								<label>Nomor Telepon</label>
+								<input type="text" name="">
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-1">
+							<div class="fieldgroup">
+								<label>Catatan/Permintaan</label>
+								<textarea></textarea>
+							</div>
+						</div>
+						
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="">
+						<span></span>
+						<label>Saya telah membaca Syarat & Ketentuan yang berlaku</label>
+						
+					</div>
+				</form>
+				<h3>Detail Pemesanan</h3>
+				<div class="pax">
+					<a href="#"><i class="fa-solid fa-circle-user"></i> GUEST 1</a>
+					<div class="detail">
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Title</label>
+									<select class="select2">
+										<option>Option</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Given Name</label>
+									<input type="text" name="">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Surname</label>
+									<input type="text" name="">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Country of Residence</label>
+									<select class="select2">
+										<option>Option</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Nationality</label>
+									<select class="select2">
+										<option>Option</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Birthdate</label>
+									<input type="text" class="datepicker" name="" data-select="datepicker">
+								</div>
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Number</label>
+									<input type="text" name="">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Issue Country</label>
+									<select class="select2">
+										<option>Country</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Issue Date</label>
+									<input type="text" class="datepicker" name="">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Expiration Date</label>
+									<input type="text" class="datepicker" name="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pax">
+					<a href="#"><i class="fa-solid fa-circle-user"></i> GUEST 2</a>
+					<div class="detail">
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Title</label>
+									<select class="select2">
+										<option>Option</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Given Name</label>
+									<input type="text" name="">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Surname</label>
+									<input type="text" name="">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Country of Residence</label>
+									<select class="select2">
+										<option>Option</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Nationality</label>
+									<select class="select2">
+										<option>Option</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Birthdate</label>
+									<input type="text" class="datepicker" name="" data-select="datepicker">
+								</div>
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Number</label>
+									<input type="text" name="">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Issue Country</label>
+									<select class="select2">
+										<option>Country</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Issue Date</label>
+									<input type="text" class="datepicker" name="">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="fieldgroup">
+									<label>Passport Expiration Date</label>
+									<input type="text" class="datepicker" name="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="booking-summary">
+					<div class="head">
+						<div class="img" style="background: url(images/umrah.jpg) no-repeat;"></div>
+						<h3>Exclusive - Umrah with Address Hotel</h3>
+					</div>
+					<ul>
+						<li><i class="fa-solid fa-plane-departure"></i><div><span>Departure from</span><p>Jakarta, Soekarno-Hatta International Airport</p><em>2 Flights included</em></div></li>
+						<li><i class="fa-solid fa-circle-info"></i><div><span>Cabin Class</span><p>Economy</p></div></li>
+						<li><i class="fa-solid fa-calendar-check"></i><div><span>Night(s)</span><p>2</p></div></li>
+						<li><i class="fa-solid fa-hotel"></i><div><span>Hotel(s)</span><p>Address Hotel Omar Makkah</p></div></li>
+						<li><i class="fa-solid fa-list-check"></i><div><span>Inclusion</span><p>1 Activity, 1 Transfer</p></div></li>
+						<li><i class="fa-solid fa-user"></i><div><span>Guests</span><p>1 Room 1 Guest</p></div></li>
+					</ul>
+					<button class="btn btn-full" onclick="location.href='booking-step-3.html'" type="button">Confirm & Continue</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="wrapper">
+			<div class="block">
+				<a href="#"><img src="images/logo-footer.png"></a>
+				<address>
+					Menara Imperium 6th Floor, <br/>
+					Jalan HR Rasuna Said Kav. 1, Guntur, Setiabudi, Kuningan, <br/>
+					Jakarta, Indonesia 12980
+				</address>
+				<span class="phone"><i class="fa-solid fa-phone"></i> 08123456789</span>
+				<span class="email"><i class="fa-solid fa-envelope"></i> email@email.com</span>
+			</div>
+			<div class="block">
+				<ul class="footer-menu">
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+				</ul>
+			</div>
+			<div class="block">
+				<ul class="footer-menu">
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+					<li><a href="">Lorem Ipsum</a></li>
+				</ul>
+			</div>
+		</div>
+		<span class="copyright">&copy; AYUBERGA 2024</span>
+	</footer>
+</body>
+</html>

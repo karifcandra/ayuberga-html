@@ -611,6 +611,23 @@ header{
         height: 320px;
         float: right;
         position: relative;
+        .select2-container{
+          width: 100% !important;
+          margin-bottom: 20px;
+          .select2-selection--single{
+            line-height: 40px;
+            border-radius:10px;
+            padding:0 10px;
+            height: 40px;
+            .select2-selection__rendered{
+              line-height: 38px;
+            }
+            .select2-selection__arrow{
+              top: 5px;
+              right: 10px;
+            }
+          }
+        }
         .nights-dropdown{
           display: none;
         }
@@ -698,12 +715,189 @@ header{
   display: inline-block;
   color: #fff;
   background: @mainblue;
-  border:0;
+  border:1px solid @mainblue;
   cursor: pointer;
   &:hover{
     background: @secblue;
   }
+  &.btn-full{
+    display: block;
+    width: 100%;
+  }
+  &.btn-secondary{
+    background: transparent;
+    color: @mainblue;
+  }
 }
+#filters{
+  position:fixed;
+  top: 0;
+  right: -800px;
+  width: 800px;
+
+  background: #e8f0ff;
+  z-index: 100;
+  height: 100vh;
+  padding:30px;
+  .btn-group{
+    position:absolute;
+    bottom:30px;
+    right: 30px;
+    .btn{
+      margin-left: 20px;
+    }
+  }
+  .close{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: @mainblue;
+  }
+  h1{
+    margin-bottom: 60px;
+    line-height: 1em;
+  }
+   /* Customize the label (the container) */
+  .checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    background: #fff;
+    padding:10px 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size:16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius:10px;
+  }
+
+  /* Hide the browser's default checkbox */
+  .checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .checkbox input:checked ~ .checkmark {
+    background-color: @mainblue;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  } 
+   /* Customize the label (the container) */
+  .radio {
+    display: block;
+    position: relative;
+    padding:10px 20px;
+    background: #fff;
+    border-radius:10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom radio button */
+  .radiomark {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .radio:hover input ~ .radiomark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .radio input:checked ~ .radiomark {
+    background-color: @mainblue;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .radio input:checked ~ .radiomark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .radio .radiomark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  } 
+}
+
 .banner{
   background-size: cover !important;
   position: relative;
@@ -1095,6 +1289,70 @@ header{
       color: #fff;
       width: 1280px;
       margin:0 auto;
+      overflow: hidden;
+      .nights{
+        float: left;
+        margin-right: 30px;
+        .select2-container{
+          width: 200px !important;
+
+          .select2-selection--single{
+            line-height: 50px;
+            background:transparent;
+            color: #fff !important;
+            height: 50px;
+            border:1px solid #fff;
+            border-radius:5px;
+            .select2-selection__rendered{
+              color: #fff;
+              line-height: 48px;
+            }
+          }
+          .select2-selection__arrow{
+            top: 5px;
+            color: #fff;
+            right: 5px;
+          }
+        }
+      }
+      .hotel{
+        float: left;
+        .select2-container{
+          width: 200px !important;
+
+          .select2-selection--single{
+            line-height: 50px;
+            background:transparent;
+            color: #fff !important;
+            height: 50px;
+            border:1px solid #fff;
+            border-radius:5px;
+            .select2-selection__rendered{
+              color: #fff;
+              line-height: 48px;
+            }
+          }
+          .select2-selection__arrow{
+            top: 5px;
+            color: #fff;
+            right: 5px;
+          }
+        }
+      }
+      .price{
+        float: right;
+        h1{
+          line-height: 1em; 
+          color: #fff;
+          sub{
+            top: 0;
+          }
+        }
+        p{
+          text-align: right;
+          font-size: 12px;
+        }
+      }
     }
   }
   .content{
@@ -1104,6 +1362,332 @@ header{
     justify-content: space-between;
     .left{
       width: 60%;
+      #flight-detail{
+        .block{
+          background:#dde9ff;
+          border-radius:10px;
+          .flight-info{
+            padding:30px;
+            overflow: hidden;
+            border-bottom:1px solid #ccc;
+            &:last-child{
+              border-bottom:0;
+            }
+            .airline{
+             width: 100%;
+             margin-bottom: 30px;
+              img{
+                display: inline-block;
+                vertical-align: middle;
+                width: auto;
+                height: 25px;
+                margin-right: 10px;
+              }
+              h4{
+                line-height: 25px;
+                margin:0;
+                display: inline-block;
+                vertical-align: middle;
+              }
+
+            }
+            .from{
+              float: left;
+              width: 25%;
+              label{
+                padding: 5px;
+                font-weight: bold;
+                background: #fff;
+                border-radius:5px;
+                display: block;
+                max-width: 50px;
+                margin-bottom: 5px;
+                text-align: center;
+              }
+              span{
+                display: block;
+                color: @mainblue;
+              }
+            }
+            .separator{
+              float: left;
+              overflow: hidden;
+              width: 50%;
+              position:relative;
+              margin-top: 20px;
+              i{
+                background:#dde9ff;
+                padding:0 20px;
+                position:relative;
+                z-index: 1;
+                left: 50%;
+                color: @mainblue;
+                margin-left: -28px;
+              }
+              span{
+                width: 10px;
+                height: 10px;
+                border-radius:100%;
+                background:@mainblue;
+                margin-top:6px;
+                display: block;
+                &:first-child{
+                  float: left;
+                }
+                &:last-child{
+                  float: right;
+                }
+              }
+              &:before{
+                width: 100%;
+                height: 1px;
+                border-bottom:1px dashed @mainblue;
+                content: " ";
+                position:absolute;
+                left: 0;
+                top: 9px;
+              }
+            }
+            .to{
+              width: 25%;
+              text-align: right;
+              float: right;
+              label{
+                padding: 5px;
+                font-weight: bold;
+                background: #fff;
+                border-radius:5px;
+                display: block;
+                max-width: 50px;
+                margin-bottom: 5px;
+                text-align: center;
+                float: right;
+              }
+              span{
+                clear: both;
+                display: block;
+                color: @mainblue;
+              }
+            }
+          }
+        }
+      }
+      #hotel-detail{
+        .block{
+          border-radius:10px;
+          background:#dde9ff;
+          overflow: hidden;
+          margin-bottom: 20px;
+          .img{
+            height: 200px;
+            background-size: cover !important;
+            background-position:center !important;
+            width: 100%;
+          }
+          .detail{
+            padding:20px;
+            label{
+              padding:0 10px;
+              line-height: 35px;
+              background: #fff;
+              border-radius:5px;
+              font-size: 12px;
+            }
+            p{
+              color: @secblue;
+              font-size: 12px;
+              span{
+                margin-right: 20px;
+              }
+            }
+            .stars{
+              i{
+                color: #FFAE43;
+              }
+            }
+            .rating{
+              margin-bottom: 20px;
+              span{
+                background: @mainblue;
+                color: #fff;
+                padding:0 8px;
+                display: inline-block;
+                line-height: 30px;
+                font-size: 12px;
+                border-top-left-radius:10px;
+                border-top-right-radius:10px;
+                margin-right: 10px;
+                border-bottom-left-radius:10px;
+              }
+              b{
+
+              }
+            }
+            .addt{
+              border-top:1px solid #ccc;
+              padding-top: 20px;
+              span{
+                font-size: 12px;
+                margin-right: 20px;
+                color: @secblue;
+              }
+            }
+          }
+        }
+
+      }
+      #transfer-detail{
+        .block{
+          background:#dde9ff;
+          overflow: hidden;
+          border-radius:10px;
+          .top{
+            padding:30px 30px 0 30px;
+            overflow: hidden;
+            .img{
+              float: left;
+              width: 100px;
+              height: 100px;
+              border-radius:5px;
+              background-size:cover !important;
+              background-position:center !important;
+              margin-right: 20px;
+            }
+            .detail{
+              float: left;
+              h4{
+                margin-bottom:10px;
+              }
+              label{
+                font-size: 12px;
+                line-height: 30px;
+                background: #fff;
+                padding:0 10px;
+                display: inline-block;
+                border-radius:5px;
+              }
+              p{
+                span{
+                  margin-right: 20px;
+                }
+              }
+            }
+
+          }
+          .transfer{
+            border-top:1px solid #ccc;
+            padding:30px;
+            overflow: hidden;
+            .from{
+              float: left;
+              width: 25%;
+              label{
+                padding: 5px;
+                font-weight: bold;
+                background: #fff;
+                border-radius:5px;
+                display: block;
+                max-width: 50px;
+                margin-bottom: 5px;
+                text-align: center;
+              }
+              span{
+                display: block;
+                color: @mainblue;
+              }
+            }
+            .separator{
+              float: left;
+              overflow: hidden;
+              width: 50%;
+              position:relative;
+              margin-top: 20px;
+              i{
+                background:#dde9ff;
+                padding:0 20px;
+                position:relative;
+                z-index: 1;
+                left: 50%;
+                color: @mainblue;
+                margin-left: -28px;
+              }
+              span{
+                width: 10px;
+                height: 10px;
+                border-radius:100%;
+                background:@mainblue;
+                margin-top:6px;
+                display: block;
+                &:first-child{
+                  float: left;
+                }
+                &:last-child{
+                  float: right;
+                }
+              }
+              &:before{
+                width: 100%;
+                height: 1px;
+                border-bottom:1px dashed @mainblue;
+                content: " ";
+                position:absolute;
+                left: 0;
+                top: 9px;
+              }
+            }
+            .to{
+              width: 25%;
+              text-align: right;
+              float: right;
+              label{
+                padding: 5px;
+                font-weight: bold;
+                background: #fff;
+                border-radius:5px;
+                display: block;
+                max-width: 50px;
+                margin-bottom: 5px;
+                text-align: center;
+                float: right;
+              }
+              span{
+                clear: both;
+                display: block;
+                color: @mainblue;
+              }
+            }
+          }
+        }
+      }
+      #activities{
+        .block{
+          overflow: hidden;
+          background:#dde9ff;
+          margin-bottom: 20px;
+          border-radius:10px;
+          .img{
+
+            width: 100%;
+            height: 200px;
+            background-position:center !important;
+            background-size:cover !important;
+          }
+          .detail{
+            padding:20px 30px;
+            .option{
+              padding:20px;
+              border:1px solid #ccc;
+              border-radius:10px;
+              h5{
+                margin-bottom: 5px;
+              }
+              p{
+                margin:0;
+              }
+            }
+          }
+        }
+      }
       .gallery{
         display: flex;
         justify-content: space-between;
@@ -1152,6 +1736,221 @@ header{
     .right{
       width: 35%;
       padding:0 20px;
+
+      .fieldgroup{
+        margin-bottom: 20px;
+          > label:not(.radio){
+            font-weight: bold;
+          }
+        .nice-number{
+          display: flex;
+          justify-content: space-between;
+          width: 200px;
+          button{
+            background: @mainblue;
+            color: #fff;
+            font-size: 30px;
+            line-height: 40px;
+            border:0;
+            width: 50px;
+            cursor: pointer;
+          }
+          input{
+            border-radius:0;
+            border:1px solid #ccc;
+            line-height: 40px;
+            width: 100px;
+            text-align: center;
+          }
+        }
+      }
+      &.active{
+        position:fixed;
+        top: 0;
+        width: 448px;
+        right: calc(~"(100% - 1280px) / 2");
+      }
+      .radio {
+        display: block;
+        position: relative;
+        padding:0px 30px;
+        background: #fff;
+        border-radius:10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default radio button */
+      .radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom radio button */
+      .radiomark {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .radio:hover input ~ .radiomark {
+        background-color: #ccc;
+      }
+
+      /* When the radio button is checked, add a blue background */
+      .radio input:checked ~ .radiomark {
+        background-color: @mainblue;
+      }
+
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the indicator (dot/circle) when checked */
+      .radio input:checked ~ .radiomark:after {
+        display: block;
+      }
+
+      /* Style the indicator (dot/circle) */
+      .radio .radiomark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      } 
+
+      /* Aggressive reset to remove the initial spinner */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance:none;
+        margin: 0;
+      }
+      input[type="number"]:hover::-webkit-inner-spin-button,
+      input[type="number"]:hover::-webkit-outer-spin-button {
+       -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance:none;
+        margin:0;
+      }
+
+
+      /* The component (also includes vertical) */
+
+      .spinner {
+          margin: 0 0 5em 0;
+      }
+
+      .spinner:after {
+          clear: both;
+          content: "";
+          display: table;
+      }
+
+      .spinner__label {
+          display: block;
+          text-align: center;
+          width: 100%;
+      }
+
+      .spinner__button {
+          cursor: pointer;
+          display: block;
+          font-size: 1em;
+          font-weight: 700;
+          padding: 1.1em 1em 1.15em;
+          text-align: center;
+          text-decoration: none;
+          transition: background 0.4s ease;
+      }
+
+      .spinner__button--left {
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+      }
+
+      .spinner__button--right {
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+      }
+
+      .spinner__button--top {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+      }
+
+      .spinner__button--bottom {
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+      }
+
+      .spinner--vertical .spinner__button {
+          padding:2em 1em;
+          width:100%;
+      }
+
+      .spinner__input {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background: none;
+          border: none;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          border-radius: none;
+          box-sizing: border-box;
+          display: block;
+          font-size: 1em;
+          line-height: 1.5;
+          text-align: center;
+      }
+
+      .spinner--horizontal .spinner__input {
+          padding: 1em 1em 1.05em 1em;
+           @media all and (min-width:40em) {
+              padding: 1.1em 1em 1.05em 1em;
+          }
+      }
+
+      .spinner--vertical .spinner__input {
+          padding:1.5em 1em 1.5em 1em;
+          width:100%;
+      }
+
+      .spinner--horizontal .spinner__button {
+          float: left;
+          width: 25%;
+      }
+
+      .spinner--horizontal .spinner__input {
+          float: left;
+          width: 50%;
+      }
+              
+              
+            
     }
   }
 }
@@ -1836,7 +2635,261 @@ section img {
   top: 0;
   left: 0;
 }
+
 }
+.row{ 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  .col-1{
+    width: 100%;
+  }
+  .col-2{
+    width: 48%;
+  }
+  .col-3{
+    width: 32.15%;
+  }
+  .col-4{
+    width: 23.5%;
+  }
+  .col-5{
+    width: 19.5%;
+  }
+}
+.fieldgroup{
+  
+  label{
+    color: @mainblue;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input{
+    border:1px solid #ccc;
+    line-height: 35px;
+    padding:0 10px;
+    border-radius: 5px;
+    color: @mainblue;
+    display: block;
+    width: 100%;
+  }
+  textarea{
+    border:1px solid #ccc;
+    line-height: 35px;
+    padding:0 10px;
+    border-radius: 5px;
+    color: @mainblue;
+    display: block;
+    width: 100%;
+  }
+  .select2-container{
+    width: 100% !important;
+    .select2-selection--single{
+      border-color:#ccc;
+      height: 35px;
+      color: @mainblue;
+    }
+     .select2-selection__arrow{
+      top: 4px;
+     }
+  }
+}
+.textright{
+  text-align: right;
+}
+#booking{
+  margin:100px auto;
+  max-width: 1280px; 
+  h1{
+    margin-bottom: 60px;
+  }
+  .steps{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    .step{
+      width: 20%;
+      position:relative;
+      &:after{
+        width: 80%;
+        height: 2px;
+        position:absolute;
+        content: " ";
+        top: 15px;
+        background: #ccc;
+        z-index: 0;
+        right: 20px;
+
+      }
+      i{
+        font-style: normal;
+        line-height: 30px;
+        width: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        background:@secblue;
+        color: #fff;
+        border-radius:100%;
+        
+      }
+      span{
+        position:relative;
+        z-index: 1;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 30px;
+        background:#fff;
+        padding-right:10px;
+        padding-left:10px;
+      }
+      &.active{
+        &:after{
+          background:@mainblue;
+        }
+        i{
+          background: @mainblue;
+        }
+        span{
+          font-weight: bold;
+
+        }
+      }
+    }
+  }
+  .main-booking{
+    display: flex;
+    justify-content: space-between;
+    .left{
+      width: calc(~"100% - 430px");
+      form{
+        margin-bottom: 40px;
+      }
+      .login{
+        h3{
+          margin-bottom: 20px;
+        }
+      }
+      .pax{
+        margin-bottom: 20px;
+        > a{
+          border:1px solid #ccc;
+          position:relative;
+          line-height: 60px;
+          color: @mainblue;
+          display: block;
+          padding:0 20px;
+          border-radius:10px;
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          i{
+            margin-right: 10px;
+            font-size: 30px;
+            vertical-align: middle;
+          }
+          &:after{
+            width: 10px;
+            height: 10px;
+            content: " ";
+            position:absolute;
+            right: 20px;
+            top: 20px;
+            border-right:1px solid @mainblue;
+            border-bottom:1px solid @mainblue;
+            transform: rotate(45deg);
+          }
+          
+        }
+        .detail{
+          padding:20px;
+          border:1px solid #ccc;
+          border-radius:10px;
+          display: none;
+        }
+        &.active > a:after{
+            transform: rotate(-135deg);
+            top: 27px;
+          }
+          &.active > a{
+            background:#dde9ff ;
+          }
+      }
+      .guest{
+        position:relative;
+        display: block;
+        font-weight: bold;
+        padding-left:30px;
+        line-height: 20px;
+        color: @mainblue;
+        &:before{
+          width: 15px;
+          height: 15px; 
+          border:2px solid #000;
+          content: " ";
+          position:absolute;
+          left: 0;
+        }
+      }
+    }
+    .right{
+      width: 400px;
+      .booking-summary{
+        padding:20px;
+        border-radius:10px;
+        background: #dde9ff;  
+        .head{
+          display: flex;
+          margin-bottom: 30px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .img{
+            border-radius:5px;
+            width: 60px;
+            height: 60px;
+            background-size:cover !important;
+            background-position:center !important;
+          }
+          h3{
+            width: calc(~"100% - 80px");
+            line-height: 1em;
+            margin:0;
+          }
+        }
+        ul{
+          li{
+            margin-bottom: 20px;
+            display: block;
+            overflow: hidden;
+            i{
+              display: block;
+              float: left;
+              width: 30px;
+              line-height: 21px;
+              color: @secblue;
+            }
+            div{
+              width: calc(~"100% - 30px");
+              float: right;
+              span{
+                font-size:12px;
+                color: #aaa;
+              }
+              p{
+                margin:0;
+              }
+              em{
+                color: #aaa;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
 footer{
   margin-top: 100px;
   background: @mainblue;

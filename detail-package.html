@@ -8,10 +8,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/solid.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/select2.css">
+	<link rel="stylesheet" type="text/css" href="css/fotorama.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.datepicker2.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+	<script src="js/bxslider.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
+	<script type="text/javascript" src="js/fotorama.js"></script>
+	<script type="text/javascript" src="js/jquery.datepicker2.js"></script>
+	<script src="js/jquery.nice-number.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>	
 </head>
 <body>
 	<header>
@@ -44,8 +51,20 @@
 		</div>
 		<div class="belt">
 			<div class="wrapper">
-				<div class="nights">1 Nights</div>
-				<div class="hotel">3 Star Hotels</div>
+				<div class="nights">
+					<select class="select2">
+						<option>1 Night</option>
+						<option>2 Nights</option>
+						<option>3 Nights</option>
+					</select>
+				</div>
+				<div class="hotel">
+					<select class="select2">
+						<option>3 Stars Hotels</option>
+						<option>4 Stars Hotels</option>
+						<option>5 Stars Hotels</option>
+					</select>
+				</div>
 				<div class="price">
 					<h1><sub>IDR</sub> 20.000.000</h1>
 					<p>Per person on twin sharing</p>
@@ -55,11 +74,16 @@
 
 		<div class="content">
 			<div class="left">
-				<div class="gallery">
-					<div class="main-image"><img src="images/umrah.jpg"></div>
-					<div class="sub-image">
-						<img src="images/umrah.jpg">
-						<img src="images/umrah.jpg">
+				<div class="gallery-package">
+					<div class="fotorama" data-width="100%" data-nav="thumbs" data-thumbheight="100" data-thumbwidth="100" data-max-width="100%">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
+					  <img src="images/umrah.jpg">
 					</div>
 				</div>
 				<div class="sub-header">
@@ -67,6 +91,7 @@
 					<a href="#flight-detail"><i class="fa-solid fa-plane"></i> Flights</a>
 					<a href="#hotel-detail"><i class="fa-solid fa-hotel"></i> Hotels</a>
 					<a href="#transfer-detail"><i class="fa-solid fa-car"></i> Transfers</a>
+					<a href="#activities"><i class="fa-solid fa-ticket"></i> Activities</a>
 					<a href="#FAQ"><i class="fa-solid fa-circle-question"></i> FAQ</a>
 				</div>
 				<!--<div id="features">
@@ -75,15 +100,125 @@
 				</div>-->
 				<div id="flight-detail">
 					<h3>Flights Detail</h3>
-					<img src="images/flight.jpg">
+					<div class="block">
+						<div class="flight-info">
+							<div class="airline">
+								<img src="images/omenair.png">
+								<h4>Omen Air</h4>
+							</div>
+							<div class="from">
+								<label>CGK</label>
+								<span>Jakarta</span>
+							</div>
+							<div class="separator">
+								<span></span>
+								<i class="fa-solid fa-plane"></i>
+								<span></span>
+							</div>
+							<div class="to">
+								<label>MED</label>
+								<span>Jeddah</span>
+							</div>
+						</div>
+						<div class="flight-info">
+							<div class="airline">
+								<img src="images/omenair.png">
+								<h4>Omen Air</h4>
+							</div>
+							<div class="from">
+								<label>MED</label>
+								<span>Jeddah</span>
+							</div>
+							<div class="separator">
+								<span></span>
+								<i class="fa-solid fa-plane"></i>
+								<span></span>
+							</div>
+							<div class="to">
+								<label>CGK</label>
+								<span>Jakarta</span>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div id="hotel-detail">
 					<h3>Hotels Detail</h3>
-					<img src="images/hotel-detail.jpg">
+					<div class="block">
+						<div class="img" style="background: url(images/umrah.jpg) no-repeat;"></div>
+						<div class="detail">
+							<label>Madinah · 1 Nights</label>
+							<h4>The Oberoi Madinah</h4>
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p>
+								<span><i class="fa-solid fa-location-dot"></i> Madinah</span>
+								<span><i class="fa-solid fa-shoe-prints"></i> 0.43 km from Al-Masjid an-Nabawī</span>
+							</p>
+							<div class="rating">
+								<span>8.9</span>
+								<b>Ayuberga Rating</b>
+							</div>
+							<div class="addt">
+								<span>SINGLE/ DOUBLE ROOM CITY VIEW</span>
+								<span>No Ammenities</span>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div id="transfer-detail">
 					<h3>Transfers Detail</h3>
-					<img src="images/transfer.jpg">
+					<div class="block">
+						<div class="top">
+							<div class="img" style="background: url(images/umrah.jpg) no-repeat;"></div>
+							<div class="detail">
+								<h4>Transfer via GMC</h4>
+								<label>PREMIUM</label>
+								<p><span><i class="fa-solid fa-user"></i> 6 Passengers</span> <span><i class="fa-solid fa-car-side"></i> 1 Car</span></p>
+								<p>GMC or similar</p>
+							</div>
+						</div>
+						<div class="transfer">
+							<div class="from">Jeddah (JED)<br/>AIRPORT</div>
+							<div class="separator">
+								<span></span>
+								<i class="fa-solid fa-car-side"></i>
+								<span></span>
+							</div>
+							<div class="to">Makkah<br/>CITY</div>
+						</div>
+					</div> 
+				</div>
+				<div id="activities">
+					<h3>Activities Detail</h3>
+					<div class="block">
+						<div class="img" style="background: url(images/umrah.jpg) no-repeat;"></div>
+						<div class="detail">
+							<h4>Makkah Ziarah</h4>
+							<p><i class="fa-solid fa-location-dot"></i> Makkah, Saudi Arabia</p>
+							<p><i class="fa-solid fa-clock"></i> 3h 00m</p>
+							<div class="option">
+								<h5>Tour Options</h5>
+								<p>Pick and Drop at the hotel in Makkah</p>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="img" style="background: url(images/umrah.jpg) no-repeat;"></div>
+						<div class="detail">
+							<h4>Makkah Ziarah</h4>
+							<p><i class="fa-solid fa-location-dot"></i> Makkah, Saudi Arabia</p>
+							<p><i class="fa-solid fa-clock"></i> 3h 00m</p>
+							<div class="option">
+								<h5>Tour Options</h5>
+								<p>Pick and Drop at the hotel in Makkah</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="description">
 					<h3>Description</h3>
@@ -125,8 +260,9 @@
 					    <li>Flights (optional)</li>	
 					    <li>Activities (Optional)</li>	
 
-					</ul>
+					</ul> 
 				</div>
+
 				<div class="exclusions">
 					<h3>Exclusions</h3>
 					<ul>
@@ -143,11 +279,111 @@
 				</div>
 				<div class="faq">
 					<h3>FAQ</h3>
-					<img src="images/faq.jpg">
+					<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
+						<div class="accordion">
+							<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent velit risus, interdum sit amet mi posuere, mollis egestas sem. Ut quis erat ac leo tempus imperdiet non eget mi. Maecenas posuere nulla nec felis sodales, non ornare lorem rutrum. Cras sed dui tortor. In rutrum eleifend imperdiet. Sed et molestie risus. Mauris venenatis imperdiet ante, non aliquam orci dictum venenatis. Suspendisse maximus, dolor at lobortis consequat, purus arcu feugiat urna, vitae ullamcorper nibh nunc vel erat. Cras lorem diam, facilisis vel ullamcorper sed, facilisis vitae diam. Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</div>
 				</div>
 			</div>		
 			<div class="right">
-				<img src="images/form.jpg">
+				<h2>Booking Form</h2>
+				<form>
+					<div class="fieldgroup">
+						<label>Berangkat dari</label>
+						<label class="radio">Surabaya
+						  <input type="radio" name="departure">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">Jakarta
+						  <input type="radio" name="departure">
+						  <span class="radiomark"></span>
+						</label>
+						
+					</div>
+					<div class="fieldgroup">
+						<label>Bintang</label>
+						<label class="radio">3 Stars
+						  <input type="radio" name="star">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">4 Stars
+						  <input type="radio" name="star">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">5 Stars
+						  <input type="radio" name="star">
+						  <span class="radiomark"></span>
+						</label>
+					</div>
+					<div class="fieldgroup">
+						<label>Tipe Kamar</label>
+						<label class="radio">Single
+						  <input type="radio" name="room">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">Double
+						  <input type="radio" name="room">
+						  <span class="radiomark"></span>
+						</label>
+						<label class="radio">Triple
+						  <input type="radio" name="room">
+						  <span class="radiomark"></span>
+						</label>
+					</div>
+					<div class="fieldgroup">
+						<label>Promo Code</label>
+						<input type="text" placeholder="Masukan kode promo" name="">
+					</div>
+					<div class="fieldgroup">
+						<label>Jumlah Orang</label>
+						<input type="number" class="number" name="" value="1">
+					</div>
+					<div class="fieldgroup">
+						<h4>Total harga</h4>
+						<h1><sup>IDR</sup> 50.000.000</h1>
+					</div>
+					<div class="fieldgroup">
+						<button class="btn btn-full">PESAN SEKARANG</button>
+					</div>
+				</form>
 			</div>		
 		</div>
 		
