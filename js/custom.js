@@ -82,6 +82,14 @@ $(window).scroll(function(){
         	$(".detail-listing .content .right").removeClass("active");
         }
     });
+$(window).scroll(function(){
+        if ($(window).scrollTop() > 400){
+            $("#booking .main-booking .right .booking-summary").addClass("active");
+        }
+        else{
+        	$("#booking .main-booking .right .booking-summary").removeClass("active");
+        }
+    });
 $(window).load(function() {
 
   $("section img").click(function() {
@@ -146,8 +154,91 @@ $(window).load(function() {
       $(".arrowl").css("display", "none");
     }
   });
+  $(".dropdown-btn").click(function(e){
+  	e.preventDefault();
+  	$(this).next().slideToggle();
+  })
+
+
+/*====== Quantity ========*/
+$(document).on('click', '.qtyDec, .qtyInc', function () {
+    var $button = $(this);
+    numberButtonFunc($button);
+});
+
+function numberButtonFunc($button) {
+    var oldValue = $button.parent().find("input").val();
+    var total = 0;
+    $('input[type="text"]').each(function () {
+        total += parseInt($(this).val());
+    });
+    var newVal;
+    if ($button.hasClass('qtyInc')) {
+        newVal = parseFloat(oldValue) + 1;
+    } else {
+        if (oldValue > 0) {
+            newVal = parseFloat(oldValue) - 1;
+        } else {
+            newVal = 0;
+        }
+    }
+    $button.parent().find("input").val(newVal).trigger('change');
+
+    updateGuestTotal();
+}
+
+function updateGuestTotal() {
+    var total = 0;
+    $('[data-total-input]').each(function () {
+        var value = parseInt($(this).val());
+        if (!isNaN(value)) {
+            total += value;
+        }
+    });
+    $('[data-total-output]').text(total);
+}
+
+$('.gty-container').each(function () {
+    var parent = $(this);
+    // guest quantity number
+    $('input[name="guest_number"]', parent).change(function () {
+        var guests = parseInt($(this).val());
+        var html = guests;
+        if (typeof guests == 'number') {
+            if (guests < 2) {
+                html = guests + ' ' + $('.guest', parent).data('text');
+            } else {
+                html = guests + ' ' + $('.guest', parent).data('text-multi');
+            }
+        }
+        $('.guest', parent).html(html);
+    });
+    $('input[name="guest_number"]', parent).trigger('change');
+
+    // room quantity number
+    $('input[name="room_number"]', parent).change(function () {
+        var rooms = parseInt($(this).val());
+        var html = rooms;
+        if (typeof rooms == 'number') {
+            if (rooms < 2) {
+                html = rooms + ' ' + $('.room', parent).data('text');
+            } else {
+                html = rooms + ' ' + $('.room', parent).data('text-multi');
+            }
+        }
+        $('.room', parent).html(html);
+    });
+    $('input[name="room_number"]', parent).trigger('change');
+
 
 });
 
+// Attach change event listeners to all total quantity input fields
+$('[data-total-input]').on('change', function () {
+    updateGuestTotal();
+});
 
+// Initial call to set the total
+updateGuestTotal();
+});
 

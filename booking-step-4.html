@@ -9,13 +9,16 @@
 	<link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/solid.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="css/select2.css">
+	<link rel="stylesheet" type="text/css" href="css/fotorama.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.datepicker2.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="js/bxslider.js"></script>
 	<script type="text/javascript" src="js/select2.js"></script>
+	<script type="text/javascript" src="js/fotorama.js"></script>
 	<script type="text/javascript" src="js/jquery.datepicker2.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script src="js/jquery.nice-number.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>	
 </head>
 <body>
 	<header>
@@ -48,25 +51,237 @@
 			<div class="step active"><i>4</i> <span>Step 4</span></div>
 			<div class="step"><i>5</i> <span>Step 5</span></div>
 		</div>
-		<h1>Booking Step 4</h1>
+		<h1>Umrah Package - Makkah Only</h1>
 		<div class="main-booking">
 			<div class="left">
-				<
+				<div class="summary">
+					<p><span><i class="fa-solid fa-plane-departure"></i> <em>Departure</em> Jakarta, Soekarno Hatta International Airport (CGK)</span></p>
+					<p><span><i class="fa-solid fa-suitcase"></i> <em>Cabin Class</em> Economy</span> <span><i class="fa-solid fa-user"></i> <em>3 Adults</em></span></p>
+					<p><span><i class="fa-regular fa-calendar"></i> <em>Start Date</em> Nov 15, 2024</span> <span><i class="fa-regular fa-calendar"></i> <em>End Date</em> Nov 20,2024</span></p>
+					<p>
+						<span class="label primary">Makkah 1N</span>
+						<span class="label secondary">1 Nights 2 Days</span>
+					</p>
+					<div class="summary-bar">
+						<a href="#passengers">Passengers</a>
+						<a href="#flights">Flights</a>
+						<a href="#hotels">Hotels</a>
+						<a href="#transfers">Transfers</a>
+						<a href="#policies">Policies</a>
+					</div>
+					<div id="passengers">
+						<h3>Passengers (3)</h3>
+						<div class="block">
+							<div class="user"><i class="fa-solid fa-user"></i></div>
+							<div class="user-info">
+								<h4>John Doe</h4>
+								<p>AS3566ED34</p>
+							</div>
+						</div>
+						<div class="block">
+							<div class="user"><i class="fa-solid fa-user"></i></div>
+							<div class="user-info">
+								<h4>John Doe</h4>
+								<p>AS3566ED34</p>
+							</div>
+						</div>
+						<div class="block">
+							<div class="user"><i class="fa-solid fa-user"></i></div>
+							<div class="user-info">
+								<h4>John Doe</h4>
+								<p>AS3566ED34</p>
+							</div>
+						</div>
+					</div>
+					<div id="flights">
+						<h3>Flights (1)</h3>
+						<div class="block">
+							<div class="flight-info">
+								<div class="airline">
+									<img src="images/omenair.png">
+									<h4>Omen Air</h4>
+									<p>FLIGHT 453FSD45</p>
+								</div>
+								<div class="from">
+									<em>08:45 AM<br/>Nov 15, 2024</em>
+									<label>CGK</label>
+									<span>Jakarta</span>
+								</div>
+								<div class="separator">
+									<em>2h 40m</em>
+									<span></span>
+									<i class="fa-solid fa-plane"></i>
+									<span></span>
+								</div>
+								<div class="to">
+									<em>08:45 AM<br/>Nov 15, 2024</em>
+									<label>MED</label>
+									<span>Jeddah</span>
+								</div>
+							</div>
+							<div class="flight-info">
+								<div class="airline">
+									<img src="images/omenair.png">
+									<h4>Omen Air</h4>
+									<p>FLIGHT 453FSD45</p>
+								</div>
+								<div class="from">
+									<em>02:25 AM<br/>Nov 20, 2024</em>
+									<label>MED</label>
+									<span>Jeddah</span>
+								</div>
+								<div class="separator">
+									<em>2h 40m</em>
+									<span></span>
+									<i class="fa-solid fa-plane"></i>
+									<span></span>
+								</div>
+								<div class="to">
+									<em>02:25 AM<br/>Nov 20, 2024</em>
+									<label>CGK</label>
+									<span>Jakarta</span>
+								</div>
+							</div>
+							<p class="text-center">
+								Total time 24h 30m
+							</p>
+							<div class="cabin-info">
+								<i class="fa-solid fa-suitcase"></i> Cabin 7KG | <i class="fa-solid fa-person-walking-luggage"></i> Check in 25KG
+							</div>
+						</div>
+					</div>
+					
+					<div id="hotels">
+						<h3>Hotels (1)</h3>
+						<div class="block">
+							
+							<div class="detail">
+								<label>Madinah · 1 Nights</label>
+								<h3>The Oberoi Madinah</h3>
+								<div class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+								<p>
+									<span><i class="fa-solid fa-location-dot"></i> Madinah</span>
+									<span><i class="fa-solid fa-shoe-prints"></i> 0.43 km from Al-Masjid an-Nabawī</span>
+								</p>
+								<div class="info">
+									<div class="in">
+										<span>Check-in</span>
+										<p>Nov 15, 2024</p>
+										<span>04:00 PM</span>
+									</div>
+									<div class="night">
+										<span>1N</span>
+									</div>
+									<div class="out">
+										<span>Check-Out</span>
+										<p>Nov 20, 2024</p>
+										<span>04:00 PM</span>
+									</div>
+								</div>
+								<div class="room">
+									<h4><sup>2X</sup> Standart Room </h4>
+									<p><i class="fa-solid fa-bed"></i> 3 Adults</p>
+
+
+								</div>
+								<div class="addt">
+									<span>SINGLE/ DOUBLE ROOM CITY VIEW</span>
+									<span>No Ammenities</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="transfers">
+						<h3>Transfers (1)</h3>
+						<div class="block">
+							<div class="top">
+								
+								<div class="detail">
+									<h4>Transfer via GMC</h4>
+									<label>PREMIUM</label>
+									<p><span><i class="fa-solid fa-user"></i> 6 Passengers</span> <span><i class="fa-solid fa-car-side"></i> 1 Car</span></p>
+									<p>GMC or similar</p>
+								</div>
+							</div>
+							<div class="transfer">
+								<div class="from">Nov 15, 2024<br/>Jeddah (JED)<br/>AIRPORT</div>
+								<div class="separator">
+									<em>1h 15m</em>
+									<span></span>
+									<i class="fa-solid fa-car-side"></i>
+									<span></span>
+								</div>
+								<div class="to">Nov 15, 2024<br/>Makkah<br/>CITY</div>
+							</div>
+						</div> 
+					</div>
+					<div id="policies">
+						<h3>Inclusions</h3>
+						<ul>
+							
+						    <li>Accommodation | In Makkah</li>	
+						    <li>Airport Transfer</li>	
+						    <li>Flights (optional)</li>	
+						    <li>Activities (Optional)</li>	
+
+						</ul> 
+					
+						<h3>Exclusions</h3>
+						<ul>
+							
+						    <li>Add-ons not included</li>
+						    <li>Early check-in and late check-out charges</li>
+						    <li>Anything not mentioned in Inclusions</li>
+						    <li>Room Extras</li>
+						   <li> Additional Meals</li>
+						    <li>Personal Expenses</li>
+						   <li> Hotel Parking</li>
+
+						</ul>
+						<h3>Terms & Conditions</h3>
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+						</ul>
+						<h3>Package Policy</h3>
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+						</ul>
+						
+					</div>
+				</div>
 			</div>
 			<div class="right">
 				<div class="booking-summary">
-					<div class="head">
-						<div class="img" style="background: url(images/umrah.jpg) no-repeat;"></div>
-						<h3>Exclusive - Umrah with Address Hotel</h3>
+					<div class="total-summary">
+						<h2><span>IDR</span> 50.000.000</h2>
+						<p>Inclusive of all options</p>
+						<p>Ticket ID : DSDFSF4534535</p>
+						<form>
+							<div class="fieldgroup">
+								<input type="text" placeholder="ENTER COUPON" name="">
+								<input type="submit" class="apply" value="APPLY" name="">
+							</div>
+						</form>
+						<button class="btn btn-full">CHECKOUT</button>
 					</div>
-					<ul>
-						<li><i class="fa-solid fa-plane-departure"></i><div><span>Departure from</span><p>Jakarta, Soekarno-Hatta International Airport</p><em>2 Flights included</em></div></li>
-						<li><i class="fa-solid fa-circle-info"></i><div><span>Cabin Class</span><p>Economy</p></div></li>
-						<li><i class="fa-solid fa-calendar-check"></i><div><span>Night(s)</span><p>2</p></div></li>
-						<li><i class="fa-solid fa-hotel"></i><div><span>Hotel(s)</span><p>Address Hotel Omar Makkah</p></div></li>
-						<li><i class="fa-solid fa-list-check"></i><div><span>Inclusion</span><p>1 Activity, 1 Transfer</p></div></li>
-						<li><i class="fa-solid fa-user"></i><div><span>Guests</span><p>1 Room 1 Guest</p></div></li>
-					</ul>
 				</div>
 			</div>
 		</div>

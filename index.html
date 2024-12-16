@@ -9,13 +9,16 @@
 	<link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/solid.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="css/select2.css">
+	<link rel="stylesheet" type="text/css" href="css/fotorama.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.datepicker2.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="js/bxslider.js"></script>
 	<script type="text/javascript" src="js/select2.js"></script>
+	<script type="text/javascript" src="js/fotorama.js"></script>
 	<script type="text/javascript" src="js/jquery.datepicker2.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script src="js/jquery.nice-number.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>	
 </head>
 <body>
 	<header>
@@ -51,12 +54,311 @@
 		<div class="nav">
 			<a href="#flighthotel" class="active">Flight + Hotel</a>
 			<a href="#hotel">Hotel</a>
+			<a href="#umrah">Umrah</a>
+			<a href="#paket">Package</a>
 		</div>
 		<div class="form-area active" id="flighthotel" >
-			<img src="images/flighthotel.jpg">
+			<form>
+				<div class="flight-form">
+					<div class="location">
+						<div class="fieldgroup">
+							<label>Kota Asal</label>
+							<select class="select2">
+								<option>City 1</option>
+								<option>City 2</option>
+								<option>City 3</option>
+								<option>City 4</option>
+								<option>City 5</option>
+								<option>City 6</option>
+							</select>
+						</div>
+						<div class="fieldgroup">
+							<label>Kota Tujuan</label>
+							<select class="select2">
+								<option>City 1</option>
+								<option>City 2</option>
+								<option>City 3</option>
+								<option>City 4</option>
+								<option>City 5</option>
+								<option>City 6</option>
+							</select>
+						</div>
+					</div>
+					<div class="options">
+						<div class="fieldgroup">
+							<i class="fa-regular fa-calendar-days"></i>
+							<label>Check-In</label>
+							<input type="text" class="datepicker" data-select="datepicker" name="">
+						</div>
+						<div class="fieldgroup">
+							<i class="fa-regular fa-calendar-days"></i>
+							<label>Check-Out</label>
+							<input type="text" class="datepicker" data-select="datepicker" name="">
+						</div>
+						<div class="fieldgroup">
+							<label>Room & Guest</label>
+							<div
+                                class="dropdown dropdown-contain gty-container"
+                              >
+                                <a
+                                  class="dropdown-toggle dropdown-btn"
+                                  href="#"
+                                  role="button"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                  data-bs-auto-close="outside"
+                                >
+                                  <span
+                                    class="room"
+                                    data-text="Room"
+                                    data-text-multi="Rooms"
+                                    >0 Room</span
+                                  >
+                                  -
+                                  <span
+                                    class="guest"
+                                    data-text="Guest"
+                                    data-text-multi="Guests"
+                                    >0 Guest</span
+                                  >
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-wrap">
+                                  <div class="dropdown-item">
+                                    <div
+                                      class="qty-box d-flex align-items-center justify-content-between"
+                                    >
+                                      <label>Room</label>
+                                      <div
+                                        class="qtyBtn d-flex align-items-center"
+                                      >
+                                        <div class="qtyDec">
+                                          <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <input
+                                          type="text"
+                                          name="room_number"
+                                          value="0"
+                                        />
+                                        <div class="qtyInc">
+                                          <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropdown-item">
+                                    <div
+                                      class="qty-box d-flex align-items-center justify-content-between"
+                                    >
+                                      <label>Guest</label>
+                                      <div
+                                        class="qtyBtn d-flex align-items-center"
+                                      >
+                                        <div class="qtyDec">
+                                          <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <input
+                                          type="text"
+                                          name="guest_number"
+                                          value="0"
+                                        />
+                                        <div class="qtyInc">
+                                          <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+						</div>
+					</div>
+					<div class="button">
+						<button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Cari Paket</button>
+					</div>
+				</div>
+			</form>
 		</div>
 		<div class="form-area" id="hotel">
-			<img src="images/hotel.jpg">
+			<!--<img src="images/hotel.jpg">-->
+			<form>
+				<div class="fh-form">
+					<div class="location">
+						<div class="fieldgroup">
+							<label>Kota/Hotel/Landmark</label>
+							<select class="select2">
+								<option>City 1</option>
+								<option>City 2</option>
+								<option>City 3</option>
+								<option>City 4</option>
+								<option>City 5</option>
+								<option>City 6</option>
+							</select>
+						</div>
+					</div>
+					<div class="options">
+						<div class="fieldgroup">
+							<i class="fa-regular fa-calendar-days"></i>
+							<label>Check-In</label>
+							<input type="text" class="datepicker" data-select="datepicker" name="">
+						</div>
+						<div class="fieldgroup">
+							<i class="fa-regular fa-calendar-days"></i>
+							<label>Check-Out</label>
+							<input type="text" class="datepicker" data-select="datepicker" name="">
+						</div>
+						<div class="fieldgroup">
+							<label>Room & Guest</label>
+							<div
+                                class="dropdown dropdown-contain gty-container"
+                              >
+                                <a
+                                  class="dropdown-toggle dropdown-btn"
+                                  href="#"
+                                  role="button"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                  data-bs-auto-close="outside"
+                                >
+                                  <span
+                                    class="room"
+                                    data-text="Room"
+                                    data-text-multi="Rooms"
+                                    >0 Room</span
+                                  >
+                                  -
+                                  <span
+                                    class="guest"
+                                    data-text="Guest"
+                                    data-text-multi="Guests"
+                                    >0 Guest</span
+                                  >
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-wrap">
+                                  <div class="dropdown-item">
+                                    <div
+                                      class="qty-box d-flex align-items-center justify-content-between"
+                                    >
+                                      <label>Room</label>
+                                      <div
+                                        class="qtyBtn d-flex align-items-center"
+                                      >
+                                        <div class="qtyDec">
+                                          <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <input
+                                          type="text"
+                                          name="room_number"
+                                          value="0"
+                                        />
+                                        <div class="qtyInc">
+                                          <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropdown-item">
+                                    <div
+                                      class="qty-box d-flex align-items-center justify-content-between"
+                                    >
+                                      <label>Guest</label>
+                                      <div
+                                        class="qtyBtn d-flex align-items-center"
+                                      >
+                                        <div class="qtyDec">
+                                         <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <input
+                                          type="text"
+                                          name="guest_number"
+                                          value="0"
+                                        />
+                                        <div class="qtyInc">
+                                          <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+						</div>
+					</div>
+					<div class="button">
+						<button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Cari Hotel</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="form-area" id="umrah">
+			<form>
+				<div class="umrah-form">
+					<div class="umrah-form">
+						<div class="fieldgroup">
+							<label>Jenis Paket</label>
+							<select class="select2">
+								<option>Paket 1</option>
+								<option>Paket 2</option>
+								<option>Paket 3</option>
+								<option>Paket 4</option>
+							</select>
+						</div>
+						<div class="fieldgroup">
+							<label>Keberangkatan</label>
+							<select class="select2">
+								<option>Januari 2025</option>
+								<option>Maret 2025</option>
+								<option>Juni 2025</option>
+								<option>Oktober 2025</option>
+							</select>
+						</div>
+						<div class="fieldgroup">
+							<label>Jumlah Hari</label>
+							<select class="select2">
+								<option>9 hari</option>
+								<option>12 hari</option>
+								<option>15 hari</option>
+								<option>20 hari</option>
+							</select>
+						</div>
+
+						<div class="fieldgroup">
+							<label>Dari</label>
+							<select class="select2">
+								<option>Jakarta</option>
+								<option>Medan</option>
+								<option>Surabaya</option>
+								
+							</select>
+						</div>
+						
+						<div class="button">
+							<button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Cari Paket</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="form-area" id="paket">
+			<form>
+				<div class="package-form">
+					<div class="fieldgroup">
+						<label>Jenis Paket</label>
+						<select class="select2">
+							<option>Paket 1</option>
+							<option>Paket 2</option>
+							<option>Paket 3</option>
+							<option>Paket 4</option>
+						</select>
+					</div>
+					<div class="fieldgroup">
+						<label>Kata Kunci</label>
+						<input type="text" placeholder="Contoh" name="">
+					</div>
+					<div class="button">
+						<button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Cari Paket</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 	<div class="home-main">
