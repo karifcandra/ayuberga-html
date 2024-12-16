@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$(".select2").select2();
 	$("#filters .close").click(function(e){
 		e.preventDefault();
@@ -240,5 +241,16 @@ $('[data-total-input]').on('change', function () {
 
 // Initial call to set the total
 updateGuestTotal();
+
+$(".toggle-password").click(function() {
+
+	  $(this).toggleClass("icon-eye-slash");
+	  var input = $($(this).attr("toggle"));
+	  if (input.attr("type") == "password") {
+	    input.attr("type", "text");
+	  } else {
+	    input.attr("type", "password");
+	  }
+	});
 });
 
