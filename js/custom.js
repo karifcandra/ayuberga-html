@@ -252,5 +252,13 @@ $(".toggle-password").click(function() {
 	    input.attr("type", "password");
 	  }
 	});
+$(".bookingform-btn").click(function(e){
+	e.preventDefault();
+	$(".detail-listing .content .right").fadeIn();
+});
+$(".detail-listing .content .right .close").click(function(e){
+	e.preventDefault();
+	$(".detail-listing .content .right").fadeOut();
+});
 });
 
