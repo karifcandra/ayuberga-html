@@ -4703,6 +4703,33 @@ table.ordered-info{
       }
     }
   }
+  #user-page{
+    width: 90%;
+    .menu-profile{
+      width: 220px;
+    }
+    .profile-section{
+      width: calc(~"100% - 250px");
+      .row{
+        width: 100%;
+      }
+      .order-history-table{
+        .head{
+          div{
+            font-size: 12px;
+          }
+        }
+        .list div{
+
+          font-size: 12px;
+          span.status{
+            font-size: 10px;
+            padding:0 10px;
+          }
+        }
+      }
+    }
+  }
   footer{
     .wrapper{
       width: 90%;
@@ -5126,6 +5153,32 @@ table.ordered-info{
             .flight-info{
               padding:15px;
             }
+          }
+        }
+      }
+    }
+  }
+  #user-page{
+    .menu-profile{
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .profile-section{
+      float: none;
+      width: 100%;
+      .row{
+        width: 100%;
+        .col-2{
+          width: 100%;
+        }
+      }
+      .order-history-table{
+        .list{
+          display: block;
+          div{
+            line-height: 30px;
+            width: 100% !important;
           }
         }
       }

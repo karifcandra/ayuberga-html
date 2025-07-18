@@ -260,5 +260,9 @@ $(".detail-listing .content .right .close").click(function(e){
 	e.preventDefault();
 	$(".detail-listing .content .right").fadeOut();
 });
+$(".mobile-menu").click(function(e){
+  e.preventDefault();
+  $(".main-menu").slideToggle();
+})
 });
 
